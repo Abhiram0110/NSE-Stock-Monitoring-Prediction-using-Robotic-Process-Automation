@@ -1,0 +1,564 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5EBEADFD00C9"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5EBEADFD00CB"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5EBEADFD010A"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5EBEADFD00CA"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5EBEADFD00CC"
+	logical_models 	(list unit_reference_list
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "User"
+			quid       	"5EBEAE0801BD"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5EBEAE1702EE"
+				supplier   	"Application"
+				quidu      	"5EBEAE0D0197"
+				messages   	(list Messages
+				    (object Message "Download dataset"
+					quid       	"5EBEAE190102"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "Corelation Of Data"
+					quid       	"5EBEAE3400DE"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "Data Preprocessing"
+					quid       	"5EBEAE430251"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2)
+				    (object Message "KNN with Uniform Weights"
+					quid       	"5EBEAE560324"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3)
+				    (object Message "KNN With Dist Weights"
+					quid       	"5EBEAE680376"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	4)
+				    (object Message "KNN Accuracy"
+					quid       	"5EBEAE760213"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	5))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Application"
+			quid       	"5EBEAE0D0197"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5EBEADFD00D1"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5EBEAE0500BE"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "User" @2
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EBEAE0801BD"
+			width      	300
+			height     	1297
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @3
+			    location   	(448, 368)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @4
+			    location   	(448, 560)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @5
+			    location   	(448, 768)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @6
+			    location   	(448, 960)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @7
+			    location   	(448, 1136)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @8
+			    location   	(448, 1312)
+			    line_color 	3342489
+			    InterObjView 	@2
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Application" @9
+			location   	(1696, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@9
+			    location   	(1696, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EBEAE0D0197"
+			width      	300
+			height     	1297
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @10
+			    location   	(1696, 368)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @11
+			    location   	(1696, 560)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @12
+			    location   	(1696, 768)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @13
+			    location   	(1696, 960)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @14
+			    location   	(1696, 1136)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @15
+			    location   	(1696, 1312)
+			    line_color 	3342489
+			    InterObjView 	@9
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @16
+			location   	(0, 368)
+			label      	(object SegLabel @17
+			    Parent_View 	@16
+			    location   	(1072, 324)
+			    quidu      	"5EBEAE190102"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	312
+			    justify    	0
+			    label      	"Download dataset"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@9
+			Focus_Src  	@3
+			Focus_Entry 	@10
+			origin     	(464, 368)
+			terminus   	(1680, 368)
+			ordinal    	0)
+		    (object InterMessView "" @18
+			location   	(0, 560)
+			label      	(object SegLabel @19
+			    Parent_View 	@18
+			    location   	(1072, 516)
+			    quidu      	"5EBEAE3400DE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	322
+			    justify    	0
+			    label      	"Corelation Of Data"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@9
+			Focus_Src  	@4
+			Focus_Entry 	@11
+			origin     	(464, 560)
+			terminus   	(1680, 560)
+			ordinal    	1)
+		    (object InterMessView "" @20
+			location   	(0, 768)
+			label      	(object SegLabel @21
+			    Parent_View 	@20
+			    location   	(1072, 724)
+			    quidu      	"5EBEAE430251"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	344
+			    justify    	0
+			    label      	"Data Preprocessing"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@9
+			Focus_Src  	@5
+			Focus_Entry 	@12
+			origin     	(464, 768)
+			terminus   	(1680, 768)
+			ordinal    	2)
+		    (object InterMessView "" @22
+			location   	(0, 960)
+			label      	(object SegLabel @23
+			    Parent_View 	@22
+			    location   	(1072, 916)
+			    quidu      	"5EBEAE560324"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	469
+			    justify    	0
+			    label      	"KNN with Uniform Weights"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@9
+			Focus_Src  	@6
+			Focus_Entry 	@13
+			origin     	(464, 960)
+			terminus   	(1680, 960)
+			ordinal    	3)
+		    (object InterMessView "" @24
+			location   	(0, 1136)
+			label      	(object SegLabel @25
+			    Parent_View 	@24
+			    location   	(1072, 1092)
+			    quidu      	"5EBEAE680376"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	451
+			    justify    	0
+			    label      	"KNN With Dist Weights"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@9
+			Focus_Src  	@7
+			Focus_Entry 	@14
+			origin     	(464, 1136)
+			terminus   	(1680, 1136)
+			ordinal    	4)
+		    (object InterMessView "" @26
+			location   	(0, 1312)
+			label      	(object SegLabel @27
+			    Parent_View 	@26
+			    location   	(1072, 1268)
+			    quidu      	"5EBEAE760213"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	291
+			    justify    	0
+			    label      	"KNN Accuracy"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@2
+			supplier   	@9
+			Focus_Src  	@8
+			Focus_Entry 	@15
+			origin     	(464, 1312)
+			terminus   	(1680, 1312)
+			ordinal    	5)))
+	    (object ObjectDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5EBEAEA80329"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ObjectView "User" @28
+			location   	(800, 624)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@28
+			    location   	(719, 573)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	162
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EBEAE0801BD"
+			height     	126
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object ObjectView "Application" @29
+			location   	(2480, 624)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@29
+			    location   	(2349, 574)
+			    fill_color 	12058623
+			    nlines     	2
+			    max_width  	263
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EBEAE0D0197"
+			width      	281
+			height     	125
+			annotation 	4
+			autoResize 	TRUE
+			subobjects 	0
+			x_offset   	0.000000
+			y_offset   	0.000000)
+		    (object LinkView "" @30
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EBEAE1702EE"
+			client     	@28
+			supplier   	@29
+			line_style 	0)
+		    (object MessView "" @31
+			location   	(1614, 580)
+			line_color 	3342489
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(1614, 301)
+			    quidu      	"5EBEAE190102"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	356
+			    justify    	0
+			    label      	"Download dataset"
+			    pctDist    	0.500000
+			    height     	279
+			    orientation 	0)
+			label      	(object SegLabel @33
+			    Parent_View 	@31
+			    location   	(1614, 348)
+			    quidu      	"5EBEAE3400DE"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	366
+			    justify    	0
+			    label      	"Corelation Of Data"
+			    pctDist    	0.500000
+			    height     	232
+			    orientation 	0)
+			label      	(object SegLabel @34
+			    Parent_View 	@31
+			    location   	(1614, 395)
+			    quidu      	"5EBEAE430251"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	388
+			    justify    	0
+			    label      	"Data Preprocessing"
+			    pctDist    	0.500000
+			    height     	185
+			    orientation 	0)
+			label      	(object SegLabel @35
+			    Parent_View 	@31
+			    location   	(1614, 442)
+			    quidu      	"5EBEAE560324"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	513
+			    justify    	0
+			    label      	"KNN with Uniform Weights"
+			    pctDist    	0.500000
+			    height     	138
+			    orientation 	0)
+			label      	(object SegLabel @36
+			    Parent_View 	@31
+			    location   	(1614, 489)
+			    quidu      	"5EBEAE680376"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	463
+			    justify    	0
+			    label      	"KNN With Dist Weights"
+			    pctDist    	0.500000
+			    height     	91
+			    orientation 	0)
+			label      	(object SegLabel @37
+			    Parent_View 	@31
+			    location   	(1614, 536)
+			    quidu      	"5EBEAE760213"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	303
+			    justify    	0
+			    label      	"KNN Accuracy"
+			    pctDist    	0.500000
+			    height     	44
+			    orientation 	0)
+			object_arc 	@30
+			pctDist    	0.500000
+			height     	45
+			orientation 	0
+			dir        	1
+			origin     	(1554, 580)
+			terminus   	(1674, 580))))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5EBEADFD00CC"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5EBEADFD0109"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5EBEADFD00CD"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5EBEADFD00CF"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5EBEADFD00CE"))
